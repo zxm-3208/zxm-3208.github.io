@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CH">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
@@ -17,27 +17,39 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"zxm-3208.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"بحث...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zxm-3208.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="git125123">
+    <meta name="description" content="1. Git概念Git是一个开源的分布式版本控制系统。 版本控制：是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 为什么要使用版本控制：有了它你就可以将某个文件回溯到之前的状态,甚至将整个项目都回退到过去某个时间点的状态。你可以比较文件的变化细节,查出最后是谁修改了哪个地方;从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功缺陷等等。 集中化版本控制系统：如SVN，有">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git操作">
 <meta property="og:url" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="git125123">
-<meta property="og:locale" content="zh_CH">
+<meta property="og:description" content="1. Git概念Git是一个开源的分布式版本控制系统。 版本控制：是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 为什么要使用版本控制：有了它你就可以将某个文件回溯到之前的状态,甚至将整个项目都回退到过去某个时间点的状态。你可以比较文件的变化细节,查出最后是谁修改了哪个地方;从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功缺陷等等。 集中化版本控制系统：如SVN，有">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/1.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/2.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/3.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/4.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/7.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/8.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/9-1.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/9-2.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/9-3.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/6.png">
+<meta property="og:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/5.png">
 <meta property="article:published_time" content="2023-10-31T07:41:36.000Z">
-<meta property="article:modified_time" content="2023-10-31T08:08:22.609Z">
+<meta property="article:modified_time" content="2023-10-31T12:22:28.737Z">
 <meta property="article:author" content="zxm">
 <meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/1.png">
 
 
 <link rel="canonical" href="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CH","comments":true,"permalink":"https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/","path":"2023/10/31/一些常用命令和工具的使用/Git操作/","title":"Git操作"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/","path":"2023/10/31/一些常用命令和工具的使用/Git操作/","title":"Git操作"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Git操作 | Hexo</title>
@@ -62,7 +74,7 @@
     <div class="column">
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح" role="button">
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
   </div>
 
@@ -76,7 +88,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="بحث" role="button">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
@@ -95,17 +107,17 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          المحتويات
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          站点概览
         </li>
       </ul>
 
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">git</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Git%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">1. Git概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Git%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">2. Git结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">3. 团队协作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">4. 常见命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%EF%BC%881%EF%BC%89-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%93%E5%BA%93"><span class="nav-number">4.1.</span> <span class="nav-text">（1） 初始化仓库</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E6%8F%90%E4%BA%A4%E6%93%8D%E4%BD%9C"><span class="nav-number">4.2.</span> <span class="nav-text">（2）提交操作</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%EF%BC%883%EF%BC%89reset%E6%93%8D%E4%BD%9C"><span class="nav-number">4.3.</span> <span class="nav-text">（3）reset操作</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E6%9F%A5%E7%9C%8B%E6%93%8D%E4%BD%9C"><span class="nav-number">4.4.</span> <span class="nav-text">（4）查看操作</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-git%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91"><span class="nav-number">5.</span> <span class="nav-text">5. .git的底层逻辑</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -119,12 +131,12 @@
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
           <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">الوسوم</span>
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
@@ -149,7 +161,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CH">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zxm-3208.github.io/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -177,10 +189,10 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">نُشر في</span>
+      <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="أُنشأ: 2023-10-31 15:41:36 / عُدل: 16:08:22" itemprop="dateCreated datePublished" datetime="2023-10-31T15:41:36+08:00">2023-10-31</time>
+      <time title="创建时间：2023-10-31 15:41:36 / 修改时间：20:22:28" itemprop="dateCreated datePublished" datetime="2023-10-31T15:41:36+08:00">2023-10-31</time>
     </span>
 
   
@@ -192,7 +204,136 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h6 id="git"><a href="#git" class="headerlink" title="git"></a>git</h6><p>125123</p>
+    <div class="post-body" itemprop="articleBody"><h5 id="1-Git概念"><a href="#1-Git概念" class="headerlink" title="1. Git概念"></a>1. Git概念</h5><p>Git是一个开源的<strong>分布式版本控制</strong>系统。</p>
+<p><strong>版本控制</strong>：是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p>
+<p><em>为什么要使用版本控制</em>：有了它你就可以将某个文件回溯到之前的状态,甚至将整个项目都回退到过去某个时间点的状态。你可以比较文件的变化细节,查出最后是谁修改了哪个地方;从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功缺陷等等。</p>
+<p><em>集中化版本控制系统</em>：如SVN，有一个单一的集中管理的服务器,保存所有文件的修订版本。协同工作的人们都通过客户端连到这台服务器,取出最新的文件或者提交更新，而管理员也可以轻松掌控每个开发者的权限，并且管理一个集中化的版本控制系统。本地存储的是版本间的差异。缺点：中央服务器的单点故障。</p>
+<p><em>分布式版本控制系统</em>：客户端并不只提取最新版本的文件快照，而是把代码仓库完整地镜像下来。分布式的版本控制系统在管理项目时存放的不是项目版本与版本之间的差异。它存的是索引(所需磁盘空间很少所以每个客户端都可以放下整个项目的历史记录)。</p>
+<p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/1.png" alt="image1"></p>
+<h5 id="2-Git结构"><a href="#2-Git结构" class="headerlink" title="2. Git结构"></a>2. Git结构</h5><p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/2.png" alt="image1"></p>
+<h5 id="3-团队协作"><a href="#3-团队协作" class="headerlink" title="3. 团队协作"></a>3. 团队协作</h5><ul>
+<li>团队内部协作</li>
+</ul>
+<p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/3.png" alt="image1"></p>
+<ul>
+<li>跨团队协作</li>
+</ul>
+<p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/4.png" alt="image1"></p>
+<h5 id="4-常见命令"><a href="#4-常见命令" class="headerlink" title="4. 常见命令"></a>4. 常见命令</h5><h6 id="（1）-初始化仓库"><a href="#（1）-初始化仓库" class="headerlink" title="（1） 初始化仓库"></a>（1） 初始化仓库</h6><p><strong>设置签名</strong>：</p>
+<p><code>git config --global user.name  &quot;用户名&quot;</code></p>
+<p><code>git config --global user.email  &quot;邮箱&quot;</code></p>
+<p><strong>本地仓库初始化</strong>：</p>
+<p><code>git init &lt;directory&gt;</code> （默认当前目录）</p>
+<h6 id="（2）提交操作"><a href="#（2）提交操作" class="headerlink" title="（2）提交操作"></a>（2）提交操作</h6><p><strong>将文件提交到缓存区</strong>： </p>
+<p><code>git add XXX</code>	提交xxx到暂存区</p>
+<p><code>git add .</code> 提交当前目录中的所有文件</p>
+<p><strong>将暂存区的内容提交到本地库</strong>:</p>
+<p><code>git commit -m &quot;注释&quot;</code> </p>
+<p><em>注意事项：只有通过add,commit命令将内容提交到本地库后，git才会进行管理。</em></p>
+<h6 id="（3）reset操作"><a href="#（3）reset操作" class="headerlink" title="（3）reset操作"></a>（3）reset操作</h6><p><strong>回退版本</strong>：</p>
+<p><code>git reset --hard 索引号</code></p>
+<p> <img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/7.png" alt="image1"></p>
+<p>比如要回退到{1}，就需要输入<code>git reset --hard 67c8975</code></p>
+<p> <img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/8.png" alt="image1"></p>
+<ul>
+<li><p>参数：</p>
+<ul>
+<li>hard: 本地库的指针移动的同时，重置暂存区，重置工作区 。（一般用这个）</li>
+</ul>
+<p> <img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/9-1.png" alt="image1"></p>
+<ul>
+<li>mixed: 本地库的指针移动的同时，重置暂存区，但是工作区不动 。</li>
+</ul>
+<p> <img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/9-2.png" alt="image1"></p>
+<ul>
+<li>soft: 本地库的指针移动的时候，暂存区，工作区都不动。</li>
+</ul>
+<p> <img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/9-3.png" alt="image1"></p>
+</li>
+</ul>
+<h6 id="（4）查看操作"><a href="#（4）查看操作" class="headerlink" title="（4）查看操作"></a>（4）查看操作</h6><p><strong>查看工作区和暂存区的状态</strong>: </p>
+<p><code>git status</code> </p>
+<p><strong>查看日志</strong>: </p>
+<p><code>git log</code> </p>
+<p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/6.png" alt="image1"></p>
+<ul>
+<li><p>注意事项：当日志过多时，会有分页效果，需要进行以下操作：下一页：空格 ；上一页： b ；退出：q。（到尾页了 ，显示END） </p>
+</li>
+<li><p>日志展示方式： </p>
+<ul>
+<li><code>git log</code> </li>
+<li><code>git log --pretty=oneline</code> </li>
+<li><code>git --oneline</code> </li>
+<li><code>git reflog</code>  （一般用这个）</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-git的底层逻辑"><a href="#5-git的底层逻辑" class="headerlink" title="5. .git的底层逻辑"></a>5. .git的底层逻辑</h5><p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/5.png" alt="image1"></p>
+<table>
+<thead>
+<tr>
+<th align="center">目录</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">config</td>
+<td align="center">存放当前仓库的配置信息。</td>
+</tr>
+<tr>
+<td align="center">description</td>
+<td align="center">仓库描述信息。</td>
+</tr>
+<tr>
+<td align="center">HEAD</td>
+<td align="center">HEAD指针，它指向了当前分支，这个文件记录了当前分支是哪个分支。</td>
+</tr>
+<tr>
+<td align="center">hooks</td>
+<td align="center">存放可执行的shell脚本。</td>
+</tr>
+<tr>
+<td align="center">index</td>
+<td align="center">暂存区(stage)，是一个二进制文件。</td>
+</tr>
+<tr>
+<td align="center">info</td>
+<td align="center">包含仓库的信息。</td>
+</tr>
+<tr>
+<td align="center">logs</td>
+<td align="center">保存所有更新的引用记录。</td>
+</tr>
+<tr>
+<td align="center">objects</td>
+<td align="center">存放git对象。</td>
+</tr>
+<tr>
+<td align="center">refs</td>
+<td align="center">引用</td>
+</tr>
+</tbody></table>
+<ul>
+<li>hooks: 是存储git钩子的目录，钩子是在特定事件发生时触发的脚本。比如：提交之前，提交之后。</li>
+<li>objects: 是存储git各种对象及内容的对象库，包含正常的和压缩后的。（文件名称是git管理的workspace文件内容的SHA-1 hash校验和，有40位，取前两位作为文件夹名称，后38位作为文件名。前2位作为文件夹是为了快速索引。）</li>
+<li>refs: 是存储git各种引用的目录，包含分支、远程分支和标签。<ul>
+<li>heads： 存储所有本地分支的对象，每个本地分支名对应一个文件名称，文件里面是最近提交的commit id。<br>remotes： 远程仓库信息，其中\refs\remotes\origin\HEAD记录了当前分支指向的远程分支，即当前分支提交到的远程分支。</li>
+<li>tags: 目录保存的是本地仓库的tag和head信息。一个tag对应一个和tag同名的文件，文件内容是该tag对应commit id。</li>
+</ul>
+</li>
+<li>config: 是代码库级别的配置文件。</li>
+<li>log目录下有两个文件，一个是HEAD，一个是refs。<ul>
+<li>HEAD ：记录下本地的操作。<ul>
+<li>refs目录下有两个文件夹：<ul>
+<li>heads： 存储所有本地分支的对象，每个本地分支名对应一个文件名称。在分支文件夹中存储着本地的操作记录。git banch -a 就是列出heads目录下的名字。</li>
+<li>remotes： 存储所有远程分支的对象，每个远程分支对应一个文件名称。这些分支文件中存储的是对应远程分支下的操作记录。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
     </div>
 
@@ -211,8 +352,8 @@
             <div class="post-nav-item">
             </div>
             <div class="post-nav-item">
-                <a href="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/windows%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B/" rel="next" title="">
-                   <i class="fa fa-angle-right"></i>
+                <a href="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/windows%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/" rel="next" title="windows杀死进程方法">
+                  windows杀死进程方法 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -239,7 +380,7 @@
     </span>
     <span class="author" itemprop="copyrightHolder">zxm</span>
   </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
@@ -252,7 +393,7 @@
     <span class="toggle-line"></span>
   </div>
   <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="Back to top">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
   </div>
