@@ -249,9 +249,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-10-31 15:41:36 / 修改时间：20:22:28" itemprop="dateCreated datePublished" datetime="2023-10-31T15:41:36+08:00">2023-10-31</time>
+      <time title="创建时间：2023-10-31 15:41:36" itemprop="dateCreated datePublished" datetime="2023-10-31T15:41:36+08:00">2023-10-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-11-02 23:47:13" itemprop="dateModified" datetime="2023-11-02T23:47:13+08:00">2023-11-02</time>
     </span>
 
   
@@ -279,7 +285,10 @@
 <li>跨团队协作</li>
 </ul>
 <p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/4.png" alt="image1"></p>
-<h5 id="4-常见命令"><a href="#4-常见命令" class="headerlink" title="4. 常见命令"></a>4. 常见命令</h5><h6 id="（1）-初始化仓库"><a href="#（1）-初始化仓库" class="headerlink" title="（1） 初始化仓库"></a>（1） 初始化仓库</h6><p><strong>设置签名</strong>：</p>
+<h5 id="4-分支"><a href="#4-分支" class="headerlink" title="4. 分支"></a>4. 分支</h5><p>在版本控制过程中，使用多个分支同时推进多个任务。</p>
+<p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/10.png" alt="image1"></p>
+<p><strong>好处</strong>：同时多个分支可以并行开发，互相不耽误，互相不影响，提高开发效率<br>如果有一个分支功能开发失败，直接删除这个分支就可以了，不会对其他分支产生任何影响。</p>
+<h5 id="5-常见命令"><a href="#5-常见命令" class="headerlink" title="5. 常见命令"></a>5. 常见命令</h5><h6 id="（1）-初始化仓库"><a href="#（1）-初始化仓库" class="headerlink" title="（1） 初始化仓库"></a>（1） 初始化仓库</h6><p><strong>设置签名</strong>：</p>
 <p><code>git config --global user.name  &quot;用户名&quot;</code></p>
 <p><code>git config --global user.email  &quot;邮箱&quot;</code></p>
 <p><strong>本地仓库初始化</strong>：</p>
@@ -288,7 +297,7 @@
 <p><code>git add XXX</code>	提交xxx到暂存区</p>
 <p><code>git add .</code> 提交当前目录中的所有文件</p>
 <p><strong>将暂存区的内容提交到本地库</strong>:</p>
-<p><code>git commit -m &quot;注释&quot;</code> </p>
+<p><code>git commit -m &quot;注释&quot; [文件名]</code> </p>
 <p><em>注意事项：只有通过add,commit命令将内容提交到本地库后，git才会进行管理。</em></p>
 <h6 id="（3）reset操作"><a href="#（3）reset操作" class="headerlink" title="（3）reset操作"></a>（3）reset操作</h6><p><strong>回退版本</strong>：</p>
 <p><code>git reset --hard 索引号</code></p>
@@ -328,6 +337,39 @@
 </ul>
 </li>
 </ul>
+<p><strong>文件比较操作（diff）</strong></p>
+<p><code>git diff [文件名]</code>：比较工作区和暂存区中的单个文件差异。</p>
+<p><code>git diff</code> ：比较工作区和暂存区中所有文件的差异。</p>
+<p><code>git diff [索引号] [文件名]</code>：比较暂存区和本地库文件的差异 </p>
+<h6 id="（5）分支操作"><a href="#（5）分支操作" class="headerlink" title="（5）分支操作"></a>（5）分支操作</h6><p><strong>查看分支</strong>：</p>
+<p><code>git branch -v</code></p>
+<p><strong>创建分支</strong>：</p>
+<p><code>git branch 分支名</code></p>
+<p><strong>切换分支</strong>：</p>
+<p><code>git checkout 分支名</code>    </p>
+<p><strong>分支合并</strong>：</p>
+<p><code>git merge 分支名</code></p>
+<p>注意事项：合并容易出现冲突</p>
+<p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/11.png" alt="image1"></p>
+<p>解决方案：人为决定（仍处于合并状态）。当commit后，才会脱离合并状态。</p>
+<p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/12.png" alt="image1"></p>
+<h6 id="（6）远程库操作"><a href="#（6）远程库操作" class="headerlink" title="（6）远程库操作"></a>（6）远程库操作</h6><p><strong>查看别名</strong>：</p>
+<p><code>git remote -v</code></p>
+<p><strong>增加别名</strong>：</p>
+<p><code>git remote add 别名 远程库地址</code></p>
+<p><strong>推送操作（push）</strong>：</p>
+<p><code>git push 远程库(别名) 分支 </code></p>
+<p><strong>克隆操作（clone）</strong>:</p>
+<p><code>git clone 远程库地址 </code></p>
+<p>克隆操作可以完成：（1）初始化本地库；（2）将远程库完整的克隆到本地；（3）替我们创建远程库的别名。</p>
+<p><strong>抓取操作（fetch）</strong>:将远程库中的内容抓取到本地库，没有对工作区的文件进行更新</p>
+<p><code>git fetch 远程库()别名  分支</code></p>
+<p><strong>拉取操作（pull）</strong>：</p>
+<p><code>git pull 远程库()别名  分支</code></p>
+<p>注意事项：pull操作包括了fetch和merge操作</p>
+<h6 id="7-跨团队合作"><a href="#7-跨团队合作" class="headerlink" title="7. 跨团队合作"></a>7. 跨团队合作</h6><p>首先需要在远程库中通过fork操作复制一份，形成一份新的远程库。</p>
+<p>在对文件处理完成后，需要点击<code>new pull request</code>操作，向源远程库发送请求，由源远程库进行审核操作。</p>
+<p>审核完毕后，进行合并操作。</p>
 <h5 id="5-git的底层逻辑"><a href="#5-git的底层逻辑" class="headerlink" title="5. .git的底层逻辑"></a>5. .git的底层逻辑</h5><p><img src="/2023/10/31/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Git%E6%93%8D%E4%BD%9C/5.png" alt="image1"></p>
 <table>
 <thead>
